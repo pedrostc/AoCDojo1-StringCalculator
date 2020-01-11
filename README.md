@@ -1,6 +1,20 @@
 # Art of Code Dojo - Session 1
 # Introduction to TDD and pair programming with JavaScript
 
+## TDD Basics
+
+## Ping-Pong Pair Programming
+
+In this session we're trying out the "Ping-Pong" style of pair programming.
+The idea is that both participats in pair take turns as the driver on every new failing test (Red step on the TDD cycle).
+
+- A Writes a test and sees it failing
+- B Writes the code needed to make the test pass
+- B Refactors the code as needed
+- B Writes a new failing test
+- A Writes the code needed to makr the test pass
+- ...
+
 ## Coding Challenge - String Calculator
 ### Rules
 - Try not to read ahead.
@@ -37,3 +51,4 @@
 9. Make sure you can also handle multiple delimiters with length longer than one char
 
 Original author: [Roy Osherove](https://osherove.com/tdd-kata-1)
+
