@@ -4,9 +4,9 @@
   "description": "First session of the Art of Code Dojo - Introduction to TDD and pair programming with JavaScript.",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha",
-    "test:watch": "mocha --watch",
-    "cover": "nyc mocha",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "cover": "nyc jest",
     "mutate": "stryker run"
   },
   "author": "Pedro Osternack Correa",
@@ -19,11 +19,9 @@
     "@stryker-mutator/babel-transpiler": "^2.4.0",
     "@stryker-mutator/core": "^2.4.0",
     "@stryker-mutator/javascript-mutator": "^2.4.0",
-    "@stryker-mutator/mocha-framework": "^2.4.0",
-    "@stryker-mutator/mocha-runner": "^2.4.0",
-    "@types/chai": "^4.2.7",
-    "chai": "^4.2.0",
-    "mocha": "^7.0.0",
+    "@stryker-mutator/jest-runner": "^2.5.0",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
     "nyc": "^15.0.0"
   },
   "dependencies": {}

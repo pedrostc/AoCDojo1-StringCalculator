@@ -3,9 +3,9 @@ module.exports = function(config) {
     mutator: "javascript",
     packageManager: "npm",
     reporters: ["clear-text", "progress"],
-    testRunner: "mocha",
+    testRunner: "jest",
     transpilers: ["babel"],
-    testFramework: "mocha",
+    testFramework: "jest",
     coverageAnalysis: "off",
     babel: {
       optionsFile: '.babelrc', 
