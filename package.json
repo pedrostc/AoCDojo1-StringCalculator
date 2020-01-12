@@ -2,7 +2,7 @@
   "name": "art-of-code-session-1",
   "version": "0.1.0",
   "description": "First session of the Art of Code Dojo - Introduction to TDD and pair programming with JavaScript.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "mocha",
     "test:watch": "mocha --watch",
