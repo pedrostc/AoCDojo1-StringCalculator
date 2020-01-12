@@ -2,7 +2,6 @@
 # Introduction to TDD and pair programming with JavaScript
 
 ## Table of contents
-- [Table of contents](#table-of-contents)
 - [Getting started with this repository](#getting-started-with-this-repository)
 - [TDD Basics](#tdd-basics)
   - [Red-Green-Refactor](#red-green-refactor)
