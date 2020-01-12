@@ -15,6 +15,52 @@ The idea is that both participats in pair take turns as the driver on every new 
 - A Writes the code needed to makr the test pass
 - ...
 
+## JavaScript Testing
+In this repository we're using [mocha](https://mochajs.org/) as our test runner and [chai](https://www.chaijs.com/) as our assertation library.
+
+To write a test you should use the `it` function, it takes a string as its first argument and a function as the second. The string is the test description and the function is the test code:
+```js
+it('should receive a csv string', function() { /* Test code here */ });
+```
+
+You can use the `describe` function to group your tests. It has the same signature as the `it` function, receiving a string and a function as arguments. You should add your tests to the body of the second argument:
+```js
+describe('add', function() {
+    it('should receive a csv string', function() { /* Test code here */ });
+    it('should sum all comma separated elements in the string', function() { /* Test code here */ });
+});
+```
+
+### Asserting
+For assertation this repo is using the `expect` object. It offers an [idiomatic/fluent interface](https://www.chaijs.com/api/bdd) to write your assertations.
+```js
+expect(value).to.be.true;
+expect(value).to.equals(true);
+expect(value).not.to.equals(false);
+```
+
+#### Errors
+There are two styles to assert on errors, one uses a try/catch block and asserts on the error object in the catch block. The second uses the `throw` method of the `expect` object.
+```js
+// Using a try/catch block
+it('should throw an error', function() {
+    try {
+        brokenFunction();
+    } catch(error) {
+        expect(error.message).to.equal('I am an error message');
+    }
+});
+```
+
+```js
+// Using the expect.to.throw method
+it('should throw an error', function() {
+    expect(brokenFunction()).to.throw();
+    // or, if you want to be more specific
+    expect(brokenFunction()).to.throw(Error, 'I am an error message');
+});
+```
+
 ## Coding Challenge - String Calculator
 ### Rules
 - Try not to read ahead.
