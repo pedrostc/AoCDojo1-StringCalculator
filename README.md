@@ -113,6 +113,8 @@ This repository is using the following convention for test file names: `<name>.s
 If you use the `.spec.js` extension for your file, the test runner will pick it up automatically and execute all available tests.
 
 ## Coding Challenge - String Calculator
+Original kata author: [Roy Osherove](https://osherove.com/tdd-kata-1)
+
 ### Rules
 - Try not to read ahead.
 - Do one task at a time. The trick is to learn to work incrementally.
@@ -146,5 +148,3 @@ If you use the `.spec.js` extension for your file, the test runner will pick it 
 8. Allow multiple delimiters like this: `"//[delim1][delim2]\n"` for example `"//[*][%]\n1*2%3"` should return `6`.
 
 9. Make sure you can also handle multiple delimiters with length longer than one char
-
-Original author: [Roy Osherove](https://osherove.com/tdd-kata-1)
