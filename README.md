@@ -1,6 +1,24 @@
 # Art of Code Dojo - Session 1
 # Introduction to TDD and pair programming with JavaScript
 
+## Table of contents
+- [Table of contents](#table-of-contents)
+- [Getting started with this repository](#getting-started-with-this-repository)
+- [TDD Basics](#tdd-basics)
+  - [Red-Green-Refactor](#red-green-refactor)
+  - [Cycle steps as design opportunities](#cycle-steps-as-design-opportunities)
+  - [TDD side effects](#tdd-side-effects)
+- [Ping-Pong Pair Programming](#ping-pong-pair-programming)
+- [JavaScript Testing](#javascript-testing)
+  - [Writing tests](#writing-tests)
+  - [Asserting](#asserting)
+    - [Errors](#errors)
+  - [Filenames](#filenames)
+- [Coding Challenge - String Calculator](#coding-challenge---string-calculator)
+  - [Rules](#rules)
+  - [Challenge Tasks](#challenge-tasks)
+  
+
 ## Getting started with this repository
 You'll need [Node.Js](https://nodejs.org/) installed to be able to utilize this repository.
 
