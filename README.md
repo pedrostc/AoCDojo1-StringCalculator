@@ -15,9 +15,15 @@ The idea is that both participats in pair take turns as the driver on every new 
 - A Writes the code needed to makr the test pass
 - ...
 
-## JavaScript Testing
-In this repository we're using [mocha](https://mochajs.org/) as our test runner and [chai](https://www.chaijs.com/) as our assertation library.
+ TODO: Where to put this?
+### File names
+This repository is using the following convention for test file names: `<name>.spec.js`.
+If you use the `.spec.js` extension for your file the test runner will pick it up automatically and execute all available tests.
 
+## JavaScript Testing
+In this repository we're using [Jest](https://jestjs.io/en/) as our test framework.
+
+### Writing tests
 To write a test you should use the `it` function, it takes a string as its first argument and a function as the second. The string is the test description and the function is the test code:
 ```js
 it('should receive a csv string', function() { /* Test code here */ });
@@ -32,32 +38,33 @@ describe('add', function() {
 ```
 
 ### Asserting
-For assertation this repo is using the `expect` object. It offers an [idiomatic/fluent interface](https://www.chaijs.com/api/bdd) to write your assertations.
+For assertation this repo follows the convention of using the [expect](https://jestjs.io/docs/en/expect) notation for the tests assertations.
 ```js
-expect(value).to.be.true;
-expect(value).to.equals(true);
-expect(value).not.to.equals(false);
+expect(value).toBeTruthy()
+expect(value).toEqual(true);
+expect(value).not.toEqual(false);
+expect(value).not.toBeFalsy(false);
 ```
 
 #### Errors
-There are two styles to assert on errors, one uses a try/catch block and asserts on the error object in the catch block. The second uses the `throw` method of the `expect` object.
+There are two styles to assert on errors, one uses a try/catch block and asserts on the error object in the catch block. The second uses the `toThrow` method of the `expect` object.
 ```js
 // Using a try/catch block
 it('should throw an error', function() {
     try {
         brokenFunction();
     } catch(error) {
-        expect(error.message).to.equal('I am an error message');
+        expect(error.message).toEqual('I am an error message');
     }
 });
 ```
 
 ```js
-// Using the expect.to.throw method
+// Using the expect.toThrow method
 it('should throw an error', function() {
-    expect(brokenFunction()).to.throw();
+    expect(brokenFunction()).toThrow();
     // or, if you want to be more specific
-    expect(brokenFunction()).to.throw(Error, 'I am an error message');
+    expect(brokenFunction()).toThrow(new Error('I am an error message'));
 });
 ```
 
