@@ -86,7 +86,7 @@ expect(value).not.toBeFalsy(false);
 ```
 
 #### Errors
-There are two styles to assert errors: one uses a try/catch block and asserts on the error object in the catch block. The second uses the `toThrow` method of the `expect` object.
+There are two styles to assert errors: one uses a try/catch block and asserts on the error object in the catch block. The second uses the [toThrow](https://jestjs.io/docs/en/expect#tothrowerror) method of the `expect` object. For this second method you need to wrap your code in a function for it to work.
 ```js
 // Using a try/catch block
 it('should throw an error', function() {
@@ -101,9 +101,13 @@ it('should throw an error', function() {
 ```js
 // Using the expect.toThrow method
 it('should throw an error', function() {
-    expect(brokenFunction()).toThrow();
+    var wrapperFunction = function() {
+        borkenFunction();
+    }
+
+    expect(wrapperFunction.toThrow();
     // or, if you want to be more specific
-    expect(brokenFunction()).toThrow(new Error('I am an error message'));
+    expect(wrapperFunction).toThrow(new Error('I am an error message'));
 });
 ```
 
