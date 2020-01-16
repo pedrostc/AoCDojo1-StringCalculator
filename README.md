@@ -75,6 +75,22 @@ describe('add', function() {
     it('should sum all comma separated elements in the string', function() { /* Test code here */ });
 });
 ```
+#### Re-using the same test for multiple test cases
+You can use dynamic test to simplify your code.
+```js
+var testCases = [
+    { input: "input1", expected: "output1" },
+    { input: "input2", expected: "output2" }
+];
+
+testCases.forEach(function({input, expected}) {
+    it(`should output ${expected} for input ${input}.`, function() {
+        const actual = methodUnderTest(input);
+
+        expect(actual).toEqual(expected);
+    });
+});
+```
 
 ### Asserting
 For assertation this repo follows the convention of using the [expect](https://jestjs.io/docs/en/expect) notation for the tests assertations.
