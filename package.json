@@ -4,8 +4,8 @@
   "description": "First session of the Art of Code Dojo - Introduction to TDD and pair programming with JavaScript.",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "test": "jest --runInBand",
+    "test:watch": "jest --runInBand --watchAll",
     "cover": "jest --coverage",
     "mutate": "stryker run"
   },
